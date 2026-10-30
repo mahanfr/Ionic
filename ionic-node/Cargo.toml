@@ -1,0 +1,18 @@
+[package]
+name = "ionic-node"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ionic = { path = "../ionic" }
+libp2p = {workspace = true}
+tokio = {workspace = true}
+futures = {workspace = true}
+serde = {workspace = true}
+serde_cbor = {workspace = true}
+bincode = {workspace=true}
+anyhow = "1"
+rand = {workspace = true}
+blake3 = {workspace = true}
+blst = {workspace = true}
+ethnum = {workspace = true}
