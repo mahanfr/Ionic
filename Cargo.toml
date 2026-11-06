@@ -1,17 +1,29 @@
 [workspace]
 resolver = "3"
-members = ["ionic","iovault","gloun"]
+members = ["ionic", "ionic-node","iovault"]
 
 [workspace.lints.rust]
 unused_variables = "allow"
 dead_code = "allow"
 
 [workspace.dependencies]
+# Networking
+tokio = { version = "1.53.1", features = ["full"] }
+libp2p = { version = "0.57", features = [
+    "tokio", "tcp", "noise", "yamux", "dns",
+    "gossipsub", "kad", "request-response",
+    "identify", "macros", "serde", "ed25519", "ping"
+]}
+futures = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_cbor = "0.11"
+bincode = "1.3"
+# Binaries
 log = "0.4"
+# Base Library
 base64 = "0.23"
 rand = "0.10"
 blake3 = "1.8"
 blst = "0.3"
 ed25519-dalek = { version = "3", features = ["rand_core"] }
-tokio = { version = "1.53.1", features = ["full"] }
 ethnum = "1.5.3"

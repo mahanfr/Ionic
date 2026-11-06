@@ -14,3 +14,4 @@ blake3 = {workspace = true}
 blst = {workspace = true}
 ed25519-dalek = {workspace = true}
 ethnum = {workspace = true}
+tokio = {workspace = true}
